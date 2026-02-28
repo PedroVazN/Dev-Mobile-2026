@@ -11,11 +11,13 @@
   "dependencies": {
     "expo": "~54.0.33",
     "expo-status-bar": "~3.0.9",
+    "expo-video": "~3.0.16",
     "react": "19.1.0",
     "react-native": "0.81.5"
   },
   "devDependencies": {
     "@types/react": "~19.1.0",
+    "expo-module-scripts": "^55.0.2",
     "typescript": "~5.9.2"
   },
   "private": true
