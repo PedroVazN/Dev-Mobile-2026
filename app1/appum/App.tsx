@@ -21,7 +21,7 @@ export default function App() {
       <Text style={styles.textBola}>
         A bola havia sido perdida porem recuperamos a bola com excelencia,
         {'\n'} {'\n'}
-        e agora ela esta conosco novamente.
+        e agora ela esta conosco novamente
       </Text>
 
       <StatusBar style="auto" />
