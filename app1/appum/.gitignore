@@ -39,3 +39,6 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Mídia acima do limite do GitHub (100MB)
+assets/video-bola.mp4
