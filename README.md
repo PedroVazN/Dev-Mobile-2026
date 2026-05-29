@@ -1,22 +1,13 @@
-# Dev-Mobile-2026 — app1 (exportado)
+# Dev-Mobile-2026 — Vizzy Sanca (São Caetano do Sul)
 
-App Expo **appum** importado de:
-https://github.com/PedroVazN/Dev-Mobile-2026/tree/main/app1
+O app principal está em **`app1/appum`** (Expo / React Native).
 
-## Completar exportação (assets + dependências)
+## Início rápido
 
-No PowerShell:
-
-```powershell
-cd C:\Users\25170632.EDUC123\Projects\Dev-Mobile-2026
-.\EXPORTAR-APP.ps1
-```
-
-O script baixa o ZIP do GitHub (inclui imagens em `assets/`, `package-lock.json`) e executa `npm install`.
-
-## Executar o app
-
-```powershell
-cd C:\Users\25170632.EDUC123\Projects\Dev-Mobile-2026\app1\appum
+```bash
+cd app1/appum
+npm install
 npm start
 ```
+
+Documentação completa: [app1/appum/README.md](app1/appum/README.md)
