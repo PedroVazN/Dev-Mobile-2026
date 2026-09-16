@@ -8,3 +8,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+node_modules/
+.expo/
+dist/
+web-build/
+*.log
+.env*.local
