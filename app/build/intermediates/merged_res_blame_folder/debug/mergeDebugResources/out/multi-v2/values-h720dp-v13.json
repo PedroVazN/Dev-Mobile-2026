@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "br.edu.unisenai.rangonaregua.app-mergeDebugResources-40:/values-h720dp-v13/values-h720dp-v13.xml",
+            "outputFile": "br.edu.unisenai.rangonaregua.app-mergeDebugResources-45:/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\25170632\\.gradle\\caches\\9.1.0\\transforms\\032e7033df0e12eba086df8afdab8c3f\\workspace\\transformed\\appcompat-1.6.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "source": "C:\\Users\\25170632\\.gradle\\caches\\9.5.0\\transforms\\f4e52da0527a56e94a83ff41069a1b75\\transformed\\appcompat-1.6.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

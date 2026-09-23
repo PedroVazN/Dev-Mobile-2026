@@ -5,21 +5,28 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.List;
+
 import br.edu.unisenai.rangonaregua.R;
 import br.edu.unisenai.rangonaregua.model.Lugar;
 
 public class LugarAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
+    // Interface para tratar os cliques
     public interface Acao {
         void votar(Lugar lugar);
         void detalhar(Lugar lugar);
     }
-
     private Acao acao;
+    // -- Fim
+
+
     private List<Lugar> lugares;
+
     private static final int CARD_LIDER = 0;
     private static final int CARD_NORMAL = 1;
 
@@ -36,6 +43,7 @@ public class LugarAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
         if (viewType == CARD_LIDER) {
             View tela = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.item_lider, parent, false);
@@ -50,7 +58,7 @@ public class LugarAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         Lugar item = lugares.get(position);
-        
+
         if (holder instanceof ViewHolderLider) {
             ((ViewHolderLider) holder).txtNomeLider.setText(item.getNome());
             ((ViewHolderLider) holder).txtCategoriaLider.setText(item.getCategoria());
@@ -62,6 +70,7 @@ public class LugarAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             ((ViewHolderLider) holder).itemView.setOnClickListener(v -> {
                 acao.detalhar(item);
             });
+
         } else {
             ((ViewHolder) holder).txtPosicao.setText(String.valueOf(position + 1));
             ((ViewHolder) holder).txtNome.setText(item.getNome());
@@ -74,6 +83,7 @@ public class LugarAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             ((ViewHolder) holder).itemView.setOnClickListener(v -> {
                 acao.detalhar(item);
             });
+
         }
     }
 
@@ -83,6 +93,7 @@ public class LugarAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
+
         TextView txtPosicao, txtNome, txtCategoria, txtPreco, txtVotos;
         Button btnVotar;
 
@@ -95,9 +106,12 @@ public class LugarAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             txtVotos = itemView.findViewById(R.id.txtVotos);
             btnVotar = itemView.findViewById(R.id.btnVotar);
         }
+
+
     }
 
     static class ViewHolderLider extends RecyclerView.ViewHolder {
+
         TextView txtNomeLider, txtCategoriaLider, txtPrecoLider, txtVotosLider;
         Button btnVotarLider;
 
@@ -109,5 +123,6 @@ public class LugarAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             txtVotosLider = itemView.findViewById(R.id.txtVotosLider);
             btnVotarLider = itemView.findViewById(R.id.btnVotarLider);
         }
+
     }
 }
